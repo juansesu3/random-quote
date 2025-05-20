@@ -1,0 +1,110 @@
+/* Asegura que el body y html ocupen todo el alto de la ventana */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal centrado con flexbox */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  box-sizing: border-box;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+@media (max-width: 400px) {
+  #quote-box {
+    padding: 1rem; /* menos padding en pantallas chicas */
+  }
+}
+/* Estilo para el quote box */
+#quote-box {
+  background-color: white;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%; /* que tome el 90% del ancho del viewport */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  margin: 1rem auto; /* centrado horizontal con margen vertical */
+  box-sizing: border-box; /* para que el padding no expanda el ancho */
+}
+
+#text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.5;
+
+  transition: color 0.6s ease;
+}
+
+#author {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #555;
+  text-align: right;
+  transition: color 0.6s ease;
+}
+.quote-card__buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.quote-card__buttons--share{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+#new-quote, #tweet-quote {
+  padding: 1rem;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+#new-quote {
+  background-color: #007bff;
+  color: white;
+}
+
+#tweet-quote {
+  background-color: #1da1f2;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.developer{
+  text-align: center;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+}
